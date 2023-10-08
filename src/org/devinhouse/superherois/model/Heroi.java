@@ -4,7 +4,8 @@ public class Heroi extends Personagem {
     private String nomeVidaReal;
 
     public Heroi(String nome, String superpoder, String nomeVidaReal) {
-        super(nome, superpoder);
+        this.setNome(nome);
+        this.setSuperpoder(superpoder);
         this.nomeVidaReal = nomeVidaReal;
     }
 

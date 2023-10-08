@@ -1,5 +1,7 @@
 package org.devinhouse.superherois.model;
 
+import java.util.Objects;
+
 public abstract class Personagem {
     private String nome;
     private String superpoder;
@@ -15,8 +17,9 @@ public abstract class Personagem {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public String setNome(String nome) {
         this.nome = nome;
+        return nome;
     }
 
     public String getSuperpoder() {
@@ -27,4 +30,23 @@ public abstract class Personagem {
         this.superpoder = superpoder;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Personagem that)) return false;
+        return getNome().equals(that.getNome()) && getSuperpoder().equals(that.getSuperpoder());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNome(), getSuperpoder());
+    }
+
+    @Override
+    public String toString() {
+        return "Personagem{" +
+                "nome='" + nome + '\'' +
+                ", superpoder='" + superpoder + '\'' +
+                '}';
+    }
 }

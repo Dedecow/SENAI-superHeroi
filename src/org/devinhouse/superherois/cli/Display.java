@@ -39,7 +39,11 @@ public class Display {
                     for (Vilao vilao : viloes) {
                         System.out.println(vilao);
                     }
-
+                    break;
+                default:
+                    if (opcao >= 5){
+                        throw new IllegalArgumentException("Opção inválida");
+                    }
             }
         } while (opcao != 4);
 

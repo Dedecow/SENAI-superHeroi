@@ -4,7 +4,8 @@ public class Vilao extends Personagem {
     private Integer tempoDePrisao;
 
     public Vilao(String nome, String poder, Integer tempoDePrisao) {
-        super(nome, poder);
+        this.setNome(nome);
+        this.setSuperpoder(poder);
         this.tempoDePrisao = tempoDePrisao;
     }
 
