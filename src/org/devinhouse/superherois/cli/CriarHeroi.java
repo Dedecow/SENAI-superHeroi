@@ -20,11 +20,12 @@ public class CriarHeroi {
             String nomeSecreto = scanner.nextLine();
 
             Heroi heroi = new Heroi(nome, poder, nomeSecreto);
-            System.out.println(" Cadastrar novo heroi? ");
-            System.out.println(" 1. Sim ");
-            System.out.println(" 2. Não ");
+            herois.add(heroi);
+
+            System.out.println("Cadastrar novo heroi?");
+            System.out.println("1. Sim");
+            System.out.println("2. Não");
             opcao = Integer.parseInt(scanner.nextLine());
-            System.out.println(opcao);
         } while (opcao != 2);
     }
 }

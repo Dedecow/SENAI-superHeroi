@@ -7,9 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static org.devinhouse.superherois.cli.CriarHeroi.criarHeroi;
-import static org.devinhouse.superherois.cli.CriarVilao.criarVilao;
-
 public class Display {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -25,16 +22,24 @@ public class Display {
             System.out.println("4 - Sair");
 
             opcao = Integer.parseInt(scanner.nextLine());
-            switch (opcao){
+            switch (opcao) {
                 case 1:
-                    criarHeroi(scanner, herois);
+                    CriarHeroi.criarHeroi(scanner, herois);
                     break;
                 case 2:
-                    criarVilao(scanner, viloes);
+                    CriarVilao.criarVilao(scanner, viloes);
                     break;
             }
-        }while (opcao!= 4);
-        System.out.println(herois);
-        System.out.println(viloes);
+        } while (opcao != 4);
+
+        System.out.println("Heróis cadastrados:");
+        for (Heroi heroi : herois) {
+            System.out.println(heroi);
+        }
+
+        System.out.println("Vilões cadastrados:");
+        for (Vilao vilao : viloes) {
+            System.out.println(vilao);
+        }
     }
 }

@@ -22,4 +22,8 @@ public class Vilao extends Personagem {
         System.out.println( " Tempo de prisão: " + getTempoDePrisao() + " anos.");
 
     }
+    @Override
+    public String toString() {
+        return "Vilão: " + getNome() + " (Poder: " + getSuperpoder() + ", Tempo de Prisão: " + getTempoDePrisao() + " anos)";
+    }
 }

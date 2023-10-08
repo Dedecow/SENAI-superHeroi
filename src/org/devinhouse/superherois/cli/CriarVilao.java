@@ -1,6 +1,5 @@
 package org.devinhouse.superherois.cli;
 
-import org.devinhouse.superherois.model.Heroi;
 import org.devinhouse.superherois.model.Vilao;
 
 import java.util.List;
@@ -21,12 +20,12 @@ public class CriarVilao {
             int tempoDePrisao = Integer.parseInt(scanner.nextLine());
 
             Vilao vilao = new Vilao(nome, poder, tempoDePrisao);
-            System.out.println(" Cadastrar novo vilão? ");
-            System.out.println(" 1. Sim ");
-            System.out.println(" 2. Não ");
+            viloes.add(vilao);
+
+            System.out.println("Cadastrar novo vilão?");
+            System.out.println("1. Sim");
+            System.out.println("2. Não");
             opcao = Integer.parseInt(scanner.nextLine());
-            System.out.println(opcao);
         } while (opcao != 2);
     }
-
 }

@@ -23,4 +23,8 @@ public class Heroi extends Personagem {
         System.out.println( " Nome na vida real: " + getNomeVidaReal());
 
     }
+    @Override
+    public String toString() {
+        return "Herói: " + getNome() + " (Poder: " + getSuperpoder() + ", Nome Secreto: " + getNomeVidaReal() + ")";
+    }
 }
