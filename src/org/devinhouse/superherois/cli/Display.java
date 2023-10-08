@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static org.devinhouse.superherois.cli.CriarHeroi.criarHeroi;
+import static org.devinhouse.superherois.cli.CriarVilao.criarVilao;
 
 public class Display {
     public static void main(String[] args) {
@@ -28,7 +29,12 @@ public class Display {
                 case 1:
                     criarHeroi(scanner, herois);
                     break;
+                case 2:
+                    criarVilao(scanner, viloes);
+                    break;
             }
         }while (opcao!= 4);
+        System.out.println(herois);
+        System.out.println(viloes);
     }
 }

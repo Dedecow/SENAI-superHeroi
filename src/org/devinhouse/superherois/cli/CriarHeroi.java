@@ -12,8 +12,6 @@ public class CriarHeroi {
         do {
             System.out.print("Nome do herói: ");
             String nome = scanner.nextLine();
-            scanner.nextLine();
-
 
             System.out.print("Poder do herói: ");
             String poder = scanner.nextLine();
@@ -26,9 +24,7 @@ public class CriarHeroi {
             System.out.println(" 1. Sim ");
             System.out.println(" 2. Não ");
             opcao = Integer.parseInt(scanner.nextLine());
-        } while (opcao != 1);
-
-
+            System.out.println(opcao);
+        } while (opcao != 2);
     }
-
 }

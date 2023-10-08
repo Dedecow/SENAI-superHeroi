@@ -3,8 +3,8 @@ package org.devinhouse.superherois.model;
 public class Vilao extends Personagem {
     private Integer tempoDePrisao;
 
-    public Vilao(String nome, String superpoder, Integer tempoDePrisao) {
-        super(nome, superpoder);
+    public Vilao(String nome, String poder, Integer tempoDePrisao) {
+        super(nome, poder);
         this.tempoDePrisao = tempoDePrisao;
     }
 
