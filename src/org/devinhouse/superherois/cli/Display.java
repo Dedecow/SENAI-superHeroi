@@ -29,17 +29,20 @@ public class Display {
                 case 2:
                     CriarVilao.criarVilao(scanner, viloes);
                     break;
+                case 3:
+                    System.out.println("Heróis cadastrados:");
+                    for (Heroi heroi : herois) {
+                        System.out.println(heroi);
+                    }
+
+                    System.out.println("Vilões cadastrados:");
+                    for (Vilao vilao : viloes) {
+                        System.out.println(vilao);
+                    }
+
             }
         } while (opcao != 4);
 
-        System.out.println("Heróis cadastrados:");
-        for (Heroi heroi : herois) {
-            System.out.println(heroi);
-        }
 
-        System.out.println("Vilões cadastrados:");
-        for (Vilao vilao : viloes) {
-            System.out.println(vilao);
-        }
     }
 }
