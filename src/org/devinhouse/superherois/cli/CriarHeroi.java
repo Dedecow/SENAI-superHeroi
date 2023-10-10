@@ -1,5 +1,6 @@
 package org.devinhouse.superherois.cli;
 
+import org.devinhouse.superherois.exception.OpcaoInvalidaException;
 import org.devinhouse.superherois.model.Heroi;
 
 import java.util.List;
@@ -19,8 +20,14 @@ public class CriarHeroi {
             System.out.print("Nome secreto do herói: ");
             String nomeSecreto = scanner.nextLine();
 
-            Heroi heroi = new Heroi(nome, poder, nomeSecreto);
-            herois.add(heroi);
+            try {
+                Heroi heroi = new Heroi(nome, poder, nomeSecreto);
+                herois.add(heroi);
+            }catch (OpcaoInvalidaException e){
+                System.err.println(" Erro no cadastro de herói " + e.getMessage());
+            }
+
+
 
             System.out.println("Cadastrar novo heroi?");
             System.out.println("1. Sim");
