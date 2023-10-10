@@ -34,5 +34,6 @@ public class CriarHeroi {
             System.out.println("2. Não");
             opcao = Integer.parseInt(scanner.nextLine());
         } while (opcao != 2);
+
     }
 }

@@ -34,9 +34,13 @@ public abstract class Personagem {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Personagem that)) return false;
-        return getNome().equals(that.getNome()) && getSuperpoder().equals(that.getSuperpoder());
+        return getNome().equals(that.getNome());
     }
 
+    @Override
+    public int compareTo (Personagem outroPersonagem){
+        return this.getNome().compareTo(outroPersonagem.getNome());
+    }
     @Override
     public int hashCode() {
         return Objects.hash(getNome(), getSuperpoder());
